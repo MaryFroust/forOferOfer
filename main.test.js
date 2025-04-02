@@ -37,19 +37,93 @@ return counter
 //*point instead of the period it held before. **HINT:** this is a string-building problem, and you'll want
 //*to mostly append to the string you'll return each character, except when you hit a period. result = "" +
 const makeFriendly = function(para){
-  //let result = ""
-  for(let sent of para){
-    if(sent === "."){
-     //result = result + "!"
-     para = sent + "!"
+  let result = ""
+  for(let char of para){
+    //?char = "."
+    if(char === "."){
+     result = result + "!"
+     //result += "!"
+     //////para = sent + "!"
+    }else{
+      result = result + char
     }
   }
-  return para
+  return result
 }
 //* `cubeAll` - given an array of numbers, returns an array where each number has been cubed (a.k.a. raised to the third power).
-// const cubeAll = function(cubed){
-//   for(num of cubed)
-// }
+  const cubeAll = function(numbers){
+    const numArr = []
+    for(let num of numbers){
+    const result = num ** 3
+    numArr.push(result)
+    }
+    return numArr
+  }
+  // * `addNoises` - given an array of strings, returns an array where each string has appended to it that animal's noise.
+  //  See tests for examples! **HINT:** You're definitely going to have to check for each tested-for animal name,
+  //   but you could use a compound boolean in your `if` check, or set up an array of your own animals and use `.includes`,
+  //    or use a `switch` statement. Either way, you can look at the tests to see which names should be considered which animals!
+        const addNoises = function(animalName){
+          const animals = ['Fido', 'Garfield', 'Daffy']
+          const noiseArr = []
+          const noises =[]
+          for(let sounds of animalName){
+            noiseArr.push(animals)
+            //noiseArr.push(noises)
+          }
+          return noiseArr
+        }
+       //  const dogs = ['Fido', 'Sparky', 'Bertha']
+       //  const cats = ['Spunky', 'Spaz', 'Sally']
+       
+   //const dogNoise = "woof"
+   //const catNoise = "meow"
+     //     let result = noiseArr 
+     //    const noises = ["woof", "meow"]
+     //  for(let noise of animalName){
+     //   if('Fido' === "woof" ){
+      //   result += noiseArr
+    
+//   }else{
+//     result +
+//   }
+//   noiseArr.push(result)
+   
+//    }
+//    return noiseArr
+//  }
+
+
+const womenOnly = function(names){
+  let results = []
+  for(let name of names){
+   if(name[name.length - 1] === "F"){
+    results.push(name)
+   }
+   }
+   return results
+ }
+//  * `integersOnly` - given an array of numbers, returns an array of only those numbers that are integers.
+//   **HINT:** you can use modulus for htis, it's just SEEMS weird to do so.
+  const integersOnly = function(numbers){
+    //let result = ""
+    const numArr = []
+    for(let num of numbers){
+      if(num % 1 === 0){
+      //if(Number.isInteger(num)){
+        numArr.push(num)
+        // return "[]"
+        // let result = []
+        // result += num
+        // result.push(num)  
+        
+      // }else(num % 1 === 0)
+        //return numArr
+      }
+    }
+    return numArr
+  }
+
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
  *********************************/
